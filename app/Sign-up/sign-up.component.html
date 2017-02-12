@@ -1,0 +1,22 @@
+<v-center>
+    <text-anim>
+        <fade-anim [delay]="2">
+            <h3>We are glad to have you on board</h3>
+        </fade-anim>
+        <form action="">
+            <input [(ngModel)]="pseudo" name="pseudo" type="text" placeholder="Your username">
+            <input [(ngModel)]="email" name="email" type="email" placeholder="Your email">
+            <input [(ngModel)]="pass"  name="pass" type="password" placeholder="Choose a password">
+            <input type="password" placeholder="Reenter your password">
+            <span class="button" [class.completed]="completed">
+                <input type="button" value="Sign up" (click)="signIn()">
+            </span>
+        </form>
+    </text-anim>
+
+    <fade-anim [delay]="2" *ngIf="completed" class="successMsg">
+        <h1>Thank you for being part of us !</h1>
+        <h5>Check your email to verify your account</h5>
+        <button (click)="goToDashboard()">Sign In</button>
+    </fade-anim>
+</v-center>

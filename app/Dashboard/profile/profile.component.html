@@ -1,0 +1,20 @@
+<fade-anim>
+    <div class="profilePhoto">
+
+    </div>
+
+</fade-anim>
+
+
+<span>Email : <input type="text" [(ngModel)]="email" [value]="email" readonly></span>
+<span>Pseudo : <input type="text" (keyup)="changed=true" [value]="pseudo"></span>
+
+
+<custom-btn [text]="'Change Password'" (click)="changePassword()"></custom-btn>
+<div *ngIf="modifyPass">
+    <span><input type="text" placeholder="Old Password"></span>
+    <span><input type="text" [(ngModel)]="pass" placeholder="New Password"></span>
+</div>
+
+<custom-btn *ngIf="changed" [text]="'Save changes'" (click)="saveProfile()"></custom-btn>
+

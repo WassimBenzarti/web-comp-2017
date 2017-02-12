@@ -1,0 +1,22 @@
+:host{
+    text-align: center;
+}
+input[type=text]{
+    max-width:500px;
+    display:block;margin: 20px auto;
+    padding: 10px 5%;
+    width: 90%;
+    border: solid 1px rgba(0,0,0,.1);
+    border-radius: 3px;
+    font: 100 25px "Heebo","Roboto",sans-serif;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    transition: box-shadow .3s linear;
+}
+input[type=file]{
+    margin:20px auto;
+}
+fade-anim{
+    display: block;
+    height: 60px;
+
+}

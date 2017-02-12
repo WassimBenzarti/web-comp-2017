@@ -1,0 +1,29 @@
+:host{
+    position:relative;
+    background:#DEDEDE;
+    display:block;
+    padding: 0 30px;
+    margin:3px;
+}
+:host:before{
+    content:'';
+    position:absolute;
+    bottom:100%;
+    left:5px;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+
+    border-bottom: 7px solid #DEDEDE;
+}
+p{
+    font-size:18px;
+    margin-bottom: 2px;
+}
+span{
+    font-size:15px;
+    opacity:.5;
+    margin:0;
+
+}

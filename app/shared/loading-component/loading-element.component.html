@@ -1,0 +1,11 @@
+<div *ngIf="loading" class="spinner" [@fadeInOut]>
+    <v-center>
+        <span class="MainLogo"></span>
+
+    </v-center>
+
+</div>
+
+<div *ngIf="visiblePage" [@fadeInOut]>
+    <ng-content></ng-content>
+</div>

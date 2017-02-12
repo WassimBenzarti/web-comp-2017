@@ -1,0 +1,25 @@
+:host{
+    display:inline-block;
+    text-align: center;
+    top:0;
+    width:100%;
+    height:100%;
+    position: absolute;
+    white-space: nowrap;
+    font-size:0;
+}
+
+:host>.ghost{
+    display:inline-block;
+    height:100%;
+    margin-right:-25em;
+    vertical-align: middle;
+}
+
+:host>.v-center-main{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    white-space: normal;
+    font-size:15px;
+}

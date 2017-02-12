@@ -1,0 +1,17 @@
+<form action="">
+    <div>
+        <fade-anim [delay]="2"><h1>We are grateful for your collaboration</h1></fade-anim>
+    </div>
+    <input type="text" (input)="getData()" name="produit" [(ngModel)]="keyword"
+           placeholder="Type a product" list="products">
+    <datalist id="products">
+        <option *ngFor="let product of products" [value]="product"></option>
+    </datalist>
+
+    <input type="text" placeholder="Price you found">
+
+
+    <input type="file" name="myFile">
+
+    <custom-btn [text]="'Validate'"></custom-btn>
+</form>

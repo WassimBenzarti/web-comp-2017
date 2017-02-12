@@ -1,0 +1,16 @@
+<v-center>
+    <text-anim>
+        <fade-anim [delay]="2">
+            <h3>Welcome again !</h3>
+        </fade-anim>
+        <form action="">
+            <input [(ngModel)]="email" name="email" type="email" placeholder="Your email">
+            <input [(ngModel)]="pass"  name="pass" type="password" placeholder="Your password">
+            <span class="button">
+                <input type="button" value="Login" (click)="login()">
+            </span>
+        </form>
+    </text-anim>
+
+
+</v-center>

@@ -1,0 +1,17 @@
+<img src="/assets/logo.min.png" width="100" alt="">
+
+<nav *ngIf="isloaded">
+    <a *ngFor="let page of pages; let i=index"
+       [attr.data-title]="page.title"
+       [routerLink]="page.link"
+       routerLinkActive="active">
+        <text-anim closed [delay]="i">
+            {{page.title}}
+        </text-anim>
+    </a>
+
+
+
+</nav>
+
+

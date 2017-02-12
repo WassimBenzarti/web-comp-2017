@@ -1,0 +1,10 @@
+
+Fonts used:
+
+-Arimo,
+by Ascender Fonts:
+http://www.fontsquirrel.com/fonts/arimo
+
+- Arvo,
+by Anton Koovit
+http://www.fontsquirrel.com/fonts/arvo

@@ -1,0 +1,15 @@
+<input type="text" [(ngModel)]="value" placeholder="Search anything" (input)="searchPlace()" list="cities" (keyup)="search()" >
+
+
+<datalist id="cities">
+    <option *ngFor="let city of cities?.predictions" [value]="city?.description"></option>
+</datalist>
+
+<div *ngIf="details.length" class="result">
+    <detail *ngFor="let detail of details" [detail]="detail"></detail>
+</div>
+
+<!--<ul>-->
+    <!--<li *ngFor="let city of cities?.predictions" [value]="city.description">{{city.description}}</li>-->
+<!--</ul>-->
+

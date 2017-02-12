@@ -1,0 +1,16 @@
+
+<div>
+    <div class="img" [style.backgroundImage]="'url('+randImg()+')'"></div>
+
+    <h3>{{detail?.produit?.libelle}}</h3>
+    <p><b>Prix : </b>{{detail?.prix}}</p>
+    <p><b>Lieu : </b>{{detail?.localisation}}</p>
+    <p><b>Partagé par : </b>{{detail?.citoyen?.pseudo}}</p>
+
+    <p *ngIf="detail?.comment.length > 0">Comments:</p>
+    <div class="comments">
+
+        <comment *ngFor="let comment of detail?.comment" [comment]="comment"></comment>
+
+    </div>
+</div>

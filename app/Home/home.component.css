@@ -1,0 +1,18 @@
+.landing h5{
+    font-size:40px;
+    letter-spacing: 3px;
+
+}
+.landing h1{
+    font-size:80px;
+    letter-spacing: 3px;
+    font-weight:900;
+}
+.landing button{
+    padding:10px 20px;
+    border:solid 2px #444;
+    background:none;
+    cursor:pointer;
+    color:black;
+    text-transform: uppercase;
+}

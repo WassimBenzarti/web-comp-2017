@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <title>Angular QuickStart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="/node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="/node_modules/zone.js/dist/zone.js"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="/systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app class="hidden">
+
+    </my-app>
+    <v-center id="initLOAD" class="" ><span class="MainLogo"></span>
+
+        <style>
+            #initLOAD{display:block;
+                position:fixed;width:100%;height:100%;z-index: 999}
+            .MainLogo{
+                position:absolute;
+                top:50%;left:50%;
+                transform:translate(-50%,-50%);
+
+            }
+            #initLOAD,my-app{transition:opacity .5s;display:block;position: absolute;}
+            #initLOAD.hidden,my-app.hidden{
+                opacity:0;
+            }
+        </style>
+    </v-center>
+
+    <script>
+        window.bootstrapping.then(function(){
+            document.getElementById('initLOAD').className="";
+            setTimeout(function(){
+                document.getElementsByTagName('my-app')[0].className = "";
+                setTimeout(function() {
+                    document.getElementById('initLOAD').remove();
+                },1000);
+            },500);
+        });
+    </script>
+
+    <script>
+    if(location.host.indexOf('127.0.0.1') !== -1 || location.host.indexOf('192.168.1') !== -1)
+      document.write('<script src="'+location.protocol+'//' + (location.host || 'localhost').split(':')[0] +
+      ':8081/livereload.js?snipver=1"></' + 'script>')
+    </script>
+
+    <!--<svg id="LOGO_SVG" data-name="Layer 4 SVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 825.09 749.15"><defs><style>#LOGO_SVG.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px;stroke-dasharray: 500;stroke-dashoffset: 500;stroke-width: 10px}</style></defs><title>newLogo3</title><clipPath id="myLogoClip"><path class="cls-1" d="M98.94,245.06L249.61,751c6.31,21.2,36.44,20.92,42.36-.39L490.42,36.14c6.05-21.79,37.08-21.42,42.6.51L713,750.49c5.4,21.42,35.45,22.46,42.32,1.46L919.88,249c6.84-20.9-17.78-37.82-34.85-24L524.76,517.8a22,22,0,0,1-27.83,0L134,221.69C117.18,208,92.74,224.26,98.94,245.06Z" transform="translate(-96.96 -19)"/></clipPath></svg>-->
+  </body>
+</html>
